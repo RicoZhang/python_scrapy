@@ -15,4 +15,3 @@ class QiushiItem(scrapy.Item):
     img = scrapy.Field()      #图片
     funNum = scrapy.Field()   #点赞数
     talkNum = scrapy.Field()  #评论数
-
