@@ -19,7 +19,7 @@ NEWSPIDER_MODULE = 'qiushi.spiders'
 #USER_AGENT = 'qiushi (+http://www.yourdomain.com)'
 
 DOWNLOADER_MIDDLEWARES = {
-    'qiushi.middlewares.customMiddlewares.CustomProxy':10,
+    #'qiushi.middlewares.customMiddlewares.CustomProxy':10,
     'qiushi.middlewares.customMiddlewares.CustomUserAgent':30,
     'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware':None,
  }
