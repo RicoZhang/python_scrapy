@@ -11,4 +11,9 @@ import scrapy
 class QiushiItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    author = scrapy.Field()   #作者
+    content = scrapy.Field()  #内容
+    img = scrapy.Field()      #图片
+    funNum = scrapy.Field()   #点赞数
+    talkNum = scrapy.Field()  #评论数
+

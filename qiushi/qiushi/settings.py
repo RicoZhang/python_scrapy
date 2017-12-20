@@ -18,6 +18,11 @@ NEWSPIDER_MODULE = 'qiushi.spiders'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'qiushi (+http://www.yourdomain.com)'
 
+DOWNLOADER_MIDDLEWARES = {
+    'qiushi.middlewares.customMiddlewares.CustomProxy':10,
+    'qiushi.middlewares.customMiddlewares.CustomUserAgent':30,
+    'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware':None,
+ }
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
@@ -88,3 +93,4 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+ITEM_PIPELINES = {'qiushi.pipelines.QiushiPipeline':10}
